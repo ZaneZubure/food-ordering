@@ -132,6 +132,7 @@ class DatabaseSeeder extends Seeder
             'phone'=> '24568379',
             'email'=> 'jozols@gmail.com',
             'alias'=>'MrOak',
+            'password'=>'123',
             
         ]);
         
@@ -142,6 +143,7 @@ class DatabaseSeeder extends Seeder
             'phone'=> '26549878',
             'email'=> 'martina123@gmail.com',
             'alias'=>'martux',
+            'password'=>'123',
             
         ]);
         

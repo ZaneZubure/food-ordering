@@ -25,3 +25,6 @@ Route::get('food/{dinerid}',[App\Http\Controllers\FoodController::class,'show'])
 Route::get('feedback/{dinerid}',[App\Http\Controllers\FeedbackController::class,'show'])->name('feedback');
 Route::post('savefeedback',[App\Http\Controllers\FeedbackController::class,'store'])->name('savefeedback');
 Route::get('purchase',[PurchaseController::class,'show']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
