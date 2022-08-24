@@ -165,7 +165,26 @@ class DatabaseSeeder extends Seeder
             'user_id'=> '2',
             
         ]);
-                	
+        
+        
+        
+        DB::table('purchases')->insert([
+            'price' => '12.0',
+            'status'=>'pieņemts',
+            'user_id'=> '1',
+            
+        ]);
+
+        DB::table('foodpurchases')->insert([
+            'food_id'=> '1',
+            'purchase_id'=> '1',
+            
+        ]);
+        DB::table('foodpurchases')->insert([
+            'food_id'=> '2',
+            'purchase_id'=> '1',
+            
+        ]);
         
     }
 }

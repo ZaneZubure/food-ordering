@@ -6,6 +6,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
+@component('components.nav')
+@endcomponent
+
+    
     <div class="container text-center">
         <h1>{{$dinerName}} atsauksmes</h1>
     </div>
@@ -25,7 +29,7 @@
         </div>        
     </div>
     
-    <div class="container d-flex align-items-center justify-content-left">
+    <div class="container d-flex align-items-center justify-content-center">
         <form action="{{route('savefeedback')}}" method="post">
             {{ csrf_field() }}
             <label for="feedbacktext">Atsauksmes teksts:</label><br>
