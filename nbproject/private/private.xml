@@ -6,12 +6,12 @@
             <file>file:/C:/wamp64/www/food-ordering/app/Http/Controllers/DinerController.php</file>
             <file>file:/C:/wamp64/www/food-ordering/resources/views/feedback.blade.php</file>
             <file>file:/C:/wamp64/www/food-ordering/resources/views/diner.blade.php</file>
+            <file>file:/C:/wamp64/www/food-ordering/resources/views/addDiner.blade.php</file>
+            <file>file:/C:/wamp64/www/food-ordering/app/Http/Controllers/FeedbackController.php</file>
             <file>file:/C:/wamp64/www/food-ordering/resources/views/purchase.blade.php</file>
-            <file>file:/C:/wamp64/www/food-ordering/resources/views/auth/login.blade.php</file>
             <file>file:/C:/wamp64/www/food-ordering/resources/views/food.blade.php</file>
             <file>file:/C:/wamp64/www/food-ordering/app/Http/Controllers/FoodController.php</file>
             <file>file:/C:/wamp64/www/food-ordering/routes/web.php</file>
-            <file>file:/C:/wamp64/www/food-ordering/resources/views/auth/register.blade.php</file>
             <file>file:/C:/wamp64/www/food-ordering/app/Http/Controllers/PurchaseController.php</file>
         </group>
     </open-files>

@@ -17,7 +17,8 @@ use App\Http\Controllers\PurchaseController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('home');
+    //return view('welcome');
 });
 
 Route::get('diner',[DinerController::class,'show'])->name('diner');
@@ -26,7 +27,9 @@ Route::get('feedback/{dinerid}',[App\Http\Controllers\FeedbackController::class,
 Route::post('savefeedback/{dinerid}',[App\Http\Controllers\FeedbackController::class,'store'])->name('savefeedback');
 Route::get('purchase',[PurchaseController::class,'show']);
 Route::post('savepurchase',[App\Http\Controllers\PurchaseController::class,'store'])->name('savepurchase');
-
+Route::get('adddiner', function () {
+    return view('addDiner');
+})->middleware('admin');
 
 
 Auth::routes();

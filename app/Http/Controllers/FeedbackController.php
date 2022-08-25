@@ -9,7 +9,7 @@ use App\Models\User;
 use App\Models\Diner;
 use Route;
 use DB;
-
+use Auth;
 class FeedbackController extends Controller
 {
     /**
@@ -43,9 +43,12 @@ class FeedbackController extends Controller
         //\Log::info(json_encode($request->all()));
         $feedback = new Feedback;
         $feedback->content=$request->feedbacktext;
-        $feedback->user_id=$request->userid;
+        //$feedback->user_id=$request->userid;
         $dinerID = Route::current()->parameter('dinerid');
+        $loggedInUserID = Auth::user()->id;
         $feedback->diner_id=$dinerID;
+        $feedback->user_id=$loggedInUserID;
+        echo $loggedInUserID;
         //$feedback->is_complete =0;
         $feedback->save();
         
@@ -70,8 +73,11 @@ class FeedbackController extends Controller
         $dataUsers = User::all();       
         $dinerID = Route::current()->parameter('dinerid');
         $dataDiners = Diner::all();
+        $loggedInUserID = Auth::user()->id;
+        
+        //$loggedInUserAlias = Auth::user()->alias;
         $dinerName = DB::table('diners')->where('id', $dinerID)->value('name');
-        return view('feedback', compact('data','dataUsers','dataDiners','dinerName','dinerID'));
+        return view('feedback', compact('data','dataUsers','dataDiners','dinerName','dinerID','loggedInUserID'));
         //return view('feedback',['feedbacks'=>$data],['users'=>$dataUsers],['diners'=>$dataDiners]);
     }
 

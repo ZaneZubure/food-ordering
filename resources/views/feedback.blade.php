@@ -12,7 +12,6 @@
     <div class="container text-center">
         <h1>{{$dinerName}} atsauksmes</h1>
     </div>
-    
     <div class="container text-center ">
         <div class="d-grid gap-3">    
         @foreach($data as $feedback)
@@ -34,10 +33,10 @@
             <label for="feedbacktext">Atsauksmes teksts:</label><br>
             <input type="text" id="feedbacktext" name="feedbacktext"><br>
             
-            <!-- ŠITO PĒC TAM IZDZĒST -->
+            <!-- ŠITO PĒC TAM IZDZĒST>
             <label for="userid">Lietotāja ID</label><br>
             <input type="text" id="userid" name="userid"><br>
-            <!-- LĪDZ ŠEJIENEI -->
+             -->
             
             <button type="post" class="btn btn-secondary">Pievienot atsauksmi</button>
         </form>
