@@ -12,13 +12,15 @@
 
     
     <div class="container text-center">
-        <h1>Pasūtījums</h1>
+        <h1>Pasūtījumi</h1>
     </div>
 
     <div class="container text-center">
         @foreach($purchases as $purchase)
-        {{$purchase['price']}} euro
-        {{$purchase['status']}}
+        <b>id:</b> {{$purchase['id']}}
+        <b>cena:</b> {{$purchase['price']}} euro
+        <b>statuss:</b> {{$purchase['status']}}
+        <b>lietotāja id:</b> {{$purchase['user_id']}} <br>
         @endforeach
     </div>
 </body>

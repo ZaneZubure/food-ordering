@@ -8,7 +8,6 @@
 <body>
 @component('components.nav')
 @endcomponent
-
     
     <div class="container text-center">
         <h1>{{$dinerName}} atsauksmes</h1>
@@ -30,7 +29,7 @@
     </div>
     
     <div class="container d-flex align-items-center justify-content-center">
-        <form action="{{route('savefeedback')}}" method="post">
+        <form action="{{route('savefeedback',['dinerid'=>$dinerID])}}" method="post">
             {{ csrf_field() }}
             <label for="feedbacktext">Atsauksmes teksts:</label><br>
             <input type="text" id="feedbacktext" name="feedbacktext"><br>

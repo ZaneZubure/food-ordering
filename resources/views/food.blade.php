@@ -27,6 +27,7 @@
                     </div>
                     
                     <div class="col-2 d-flex align-items-center"><p class="fw-bolder">{{$food['price']}} eur</p></div>
+                   
                     <div class="col-2 d-flex align-items-center"><button type="button" class="btn btn-secondary">Pievienot pasūtījumam</button></div>                 
                 </div>
             @endif

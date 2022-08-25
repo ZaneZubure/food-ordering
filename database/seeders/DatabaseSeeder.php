@@ -177,6 +177,13 @@ class DatabaseSeeder extends Seeder
             
         ]);
 
+        DB::table('purchases')->insert([
+            'price' => '5.5',
+            'status'=>'pieņemts',
+            'user_id'=> '2',
+            
+        ]);
+        
         DB::table('foodpurchases')->insert([
             'food_id'=> '1',
             'purchase_id'=> '1',
@@ -185,6 +192,12 @@ class DatabaseSeeder extends Seeder
         DB::table('foodpurchases')->insert([
             'food_id'=> '2',
             'purchase_id'=> '1',
+            
+        ]);
+        
+        DB::table('foodpurchases')->insert([
+            'food_id'=> '1',
+            'purchase_id'=> '2',
             
         ]);
         

@@ -20,11 +20,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('diner',[DinerController::class,'show']);
+Route::get('diner',[DinerController::class,'show'])->name('diner');
 Route::get('food/{dinerid}',[App\Http\Controllers\FoodController::class,'show'])->name('food');
 Route::get('feedback/{dinerid}',[App\Http\Controllers\FeedbackController::class,'show'])->name('feedback');
-Route::post('savefeedback',[App\Http\Controllers\FeedbackController::class,'store'])->name('savefeedback');
+Route::post('savefeedback/{dinerid}',[App\Http\Controllers\FeedbackController::class,'store'])->name('savefeedback');
 Route::get('purchase',[PurchaseController::class,'show']);
+Route::post('savepurchase',[App\Http\Controllers\PurchaseController::class,'store'])->name('savepurchase');
+
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

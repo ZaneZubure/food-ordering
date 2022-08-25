@@ -36,6 +36,7 @@
 
                 <div class="col d-flex align-items-center justify-content-center">Vērtējums: {{$diner['rating']}}/5</div>
                 @php $dinerID = $diner['id']; @endphp
+                {{$dinerID}}
                 <div class="col d-flex align-items-center justify-content-center"><td><a class="btn btn-outline-primary" href="{{route('food', ['dinerid'=>$dinerID])}}">Apskatīt ēdienkarti</a></div>
                 <div class="col d-flex align-items-center justify-content-center"><td><a class="btn btn-outline-success" href="{{route('feedback', ['dinerid'=>$dinerID])}}">Apskatīt atsauksmes</a></td></div>
 

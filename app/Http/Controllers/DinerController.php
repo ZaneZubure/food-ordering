@@ -9,6 +9,7 @@ class DinerController extends Controller
 {
     public function show() {
         $data = Diner::all();
+        //return view('diner', compact('data'));
         return view('diner',['diners'=>$data]);
     }
     

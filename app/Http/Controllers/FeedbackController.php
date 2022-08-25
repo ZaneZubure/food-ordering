@@ -44,7 +44,8 @@ class FeedbackController extends Controller
         $feedback = new Feedback;
         $feedback->content=$request->feedbacktext;
         $feedback->user_id=$request->userid;
-        $feedback->diner_id=1;
+        $dinerID = Route::current()->parameter('dinerid');
+        $feedback->diner_id=$dinerID;
         //$feedback->is_complete =0;
         $feedback->save();
         
@@ -54,7 +55,7 @@ class FeedbackController extends Controller
 //        $dinerID = Route::current()->parameter('dinerid');
 //        $dataDiners = Diner::all();
 //        $dinerName = DB::table('diners')->where('id', $dinerID)->value('name');
-        return redirect ('diner');
+        return redirect()->route('feedback',$dinerID);
     }
 
     /**
