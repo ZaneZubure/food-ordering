@@ -127,23 +127,23 @@ class DatabaseSeeder extends Seeder
         
         DB::table('users')->insert([
             'name' => 'Jānis',
-            'last_name'=> 'Ozols',
-            'role'=> '',
+            'lastname'=> 'Ozols',
+            //'role'=> '',
             'phone'=> '24568379',
             'email'=> 'jozols@gmail.com',
             'alias'=>'MrOak',
-            'password'=>'123',
+            'password'=>'parole123',
             
         ]);
         
         DB::table('users')->insert([
             'name' => 'Marta',
-            'last_name'=> 'Bērziņa',
-            'role'=> '',
+            'lastname'=> 'Bērziņa',
+            //'role'=> '',
             'phone'=> '26549878',
             'email'=> 'martina123@gmail.com',
             'alias'=>'martux',
-            'password'=>'123',
+            'password'=>'parole123',
             
         ]);
         

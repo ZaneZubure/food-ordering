@@ -32,6 +32,46 @@
                             </div>
                         </div>
 
+                        
+                        <div class="row mb-3">
+                            <label for="lastname" class="col-md-4 col-form-label text-md-end">{{ __('Last Name') }}</label>
+                            <div class="col-md-6">
+                                <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" required >
+                                @error('lastname')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                                                
+                        <div class="row mb-3">
+                            <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('Phone') }}</label>
+                            <div class="col-md-6">
+                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" required >
+                                @error('phone')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <label for="alias" class="col-md-4 col-form-label text-md-end">{{ __('Alias') }}</label>
+                            <div class="col-md-6">
+                                <input id="alias" type="text" class="form-control @error('alias') is-invalid @enderror" name="alias" required >
+                                @error('alias')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+                        
+
+                        
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
@@ -45,7 +85,7 @@
                                 @enderror
                             </div>
                         </div>
-
+                        
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
@@ -59,7 +99,7 @@
                                 @enderror
                             </div>
                         </div>
-
+                        
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
 
