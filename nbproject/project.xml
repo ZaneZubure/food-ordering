@@ -6,6 +6,7 @@
             <name>food-ordering</name>
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>endcomponent</word>
             <word>endif</word>
             <word>foreach</word>
             <word>php</word>
