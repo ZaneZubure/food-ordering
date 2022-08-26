@@ -12,8 +12,8 @@
 @endcomponent
 
     
-    <div class="container text-center">
-        <h1>Izvēlies Ēdnīcu!</h1>
+    <div class="container text-center p-2">
+        <h1>Ēdnīcas</h1>
     </div>
     
     

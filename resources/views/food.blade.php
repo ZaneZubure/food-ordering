@@ -20,7 +20,7 @@
             @if(request()->dinerid == $food['diner_id'])
             
                 <div class="row border">
-                    <div class="col d-flex align-items-center justify-content-center "><h3>{{$food['id']}} {{$food['name']}}</h3></div>
+                    <div class="col d-flex align-items-center justify-content-center "><h3>{{$food['name']}}</h3></div>
                     
                     <div class="col">
                         <div class="row"><p class="fs-4 text-start fw-semibold">{{$food['description']}}</p></div>                        
@@ -32,7 +32,7 @@
                     <div class="col-2 d-flex align-items-center">
                         <form action="{{route('savepurchase',['foodid'=>$food['id']])}}" method="post">
                             {{ csrf_field() }}
-                            <button type="post" class="btn btn-secondary">Pievienot pasūtījumam</button>
+                            <button type="post" class="btn btn-secondary" >Pievienot pasūtījumam</button>
                         </form>
                     </div>
 

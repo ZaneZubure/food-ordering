@@ -28,13 +28,16 @@
         </div>        
     </div>
     
-    <div class="container d-flex align-items-center justify-content-center">
+    <div class="container d-flex align-items-center justify-content-center p-3">
         <form action="{{route('savefeedback',['dinerid'=>$dinerID])}}" method="post">
             {{ csrf_field() }}
-            <label for="feedbacktext">Atsauksmes teksts:</label><br>
-            <input type="text" id="feedbacktext" name="feedbacktext"><br>
-            
-            <button type="post" class="btn btn-secondary">Pievienot atsauksmi</button>
+            <div class="p-2">
+                <label for="feedbacktext">Atsauksmes teksts:</label><br>
+                <textarea  type="text" id="feedbacktext" name="feedbacktext"></textarea><br>  
+            </div>
+            <div class="p-2">
+                <button type="post" class="btn btn-secondary">Pievienot atsauksmi</button>
+            </div>            
         </form>
     </div>
 
