@@ -10,10 +10,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <div class="px-2">
-                            <a class="btn btn-primary" href="/diner" role="button">Ēdnīcas</a>
-                            <a class="btn btn-success" href="/purchase" role="button">Apsktīt Pasūtījumu</a>
-                        </div> 
+
                     </ul>
 
 

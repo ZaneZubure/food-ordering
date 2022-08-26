@@ -34,11 +34,6 @@
             <label for="feedbacktext">Atsauksmes teksts:</label><br>
             <input type="text" id="feedbacktext" name="feedbacktext"><br>
             
-            <!-- ŠITO PĒC TAM IZDZĒST>
-            <label for="userid">Lietotāja ID</label><br>
-            <input type="text" id="userid" name="userid"><br>
-             -->
-            
             <button type="post" class="btn btn-secondary">Pievienot atsauksmi</button>
         </form>
     </div>

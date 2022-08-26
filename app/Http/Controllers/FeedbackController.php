@@ -48,7 +48,7 @@ class FeedbackController extends Controller
         $loggedInUserID = Auth::user()->id;
         $feedback->diner_id=$dinerID;
         $feedback->user_id=$loggedInUserID;
-        echo $loggedInUserID;
+        //echo $loggedInUserID;
         //$feedback->is_complete =0;
         $feedback->save();
         

@@ -24,9 +24,10 @@ Route::get('/', function () {
 Route::get('diner',[DinerController::class,'show'])->name('diner');
 Route::get('food/{dinerid}',[App\Http\Controllers\FoodController::class,'show'])->name('food');
 Route::get('feedback/{dinerid}',[App\Http\Controllers\FeedbackController::class,'show'])->name('feedback');
-Route::post('savefeedback/{dinerid}',[App\Http\Controllers\FeedbackController::class,'store'])->name('savefeedback');
+Route::post('savefeedback/{dinerid}',[App\Http\Controllers\FeedbackController::class,'store'])->name('savefeedback');\
 Route::get('purchase',[PurchaseController::class,'show']);
-Route::post('savepurchase',[App\Http\Controllers\PurchaseController::class,'store'])->name('savepurchase');
+
+Route::post('savepurchase/{foodid}',[App\Http\Controllers\PurchaseController::class,'store'])->name('savepurchase');
 Route::get('adddiner', function () {
     return view('addDiner');
 })->middleware('admin');

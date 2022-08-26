@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appnotloggedin')
 <!DOCTYPE html>
 <html>
     
