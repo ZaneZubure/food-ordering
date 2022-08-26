@@ -32,7 +32,7 @@
                     <div class="col-2 d-flex align-items-center">
                         <form action="{{route('savepurchase',['foodid'=>$food['id']])}}" method="post">
                             {{ csrf_field() }}
-                            <button type="post" class="btn btn-secondary" >Pievienot pasūtījumam</button>
+                            <button type="post" class="btn btn-secondary" >Pievienot Pasūtījumam</button>
                         </form>
                     </div>
 

@@ -40,7 +40,7 @@
 
                                 <div class="col-2 d-flex align-items-center"><p class="fw-bolder">{{$food['price']}} eur</p></div>
                                 <div class="col-2 d-flex align-items-center">
-                                    <form action="" method="">
+                                    <form action="{{route('foodremove',['foodid'=>$food['id']])}}" method="post">
                                         {{ csrf_field() }}
                                         <button type="post" class="btn btn-secondary">Noņemt</button>
                                     </form>
@@ -56,7 +56,7 @@
     </div>
     <div class="container text-center">
         @foreach($purchasedata as $purchase)
-            @if($loggedInUserID == $purchase['user_id'])
+            @if($loggedInUserID == $purchase['user_id'] && $purchase['price']!=0)
 
                 <b>Kopā:</b> {{$purchase['price']}} euro
                 <b>Statuss:</b> {{$purchase['status']}}

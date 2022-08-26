@@ -28,11 +28,10 @@ Route::post('savefeedback/{dinerid}',[App\Http\Controllers\FeedbackController::c
 
 Route::get('purchase',[PurchaseController::class,'show']);
 Route::post('savepurchase/{foodid}',[App\Http\Controllers\PurchaseController::class,'store'])->name('savepurchase');
+Route::post('foodremove/{foodid}',[App\Http\Controllers\PurchaseController::class,'remove'])->name('foodremove');
 
-Route::get('adddiner', function () {
-    return view('addDiner');
-})->middleware('admin');
-
+Route::get('adddiner',[DinerController::class,'create'])->name('adddiner')->middleware('admin');
+Route::post('savediner',[DinerController::class,'store'])->name('savediner')->middleware('admin');
 
 Auth::routes();
 
